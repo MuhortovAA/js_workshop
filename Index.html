@@ -11,22 +11,139 @@
 
 <body>
     <style>
-        .spinner {
+ .spinner1 {
             margin: 0 auto;
-            width: 100px;
-            height: 100px;
-            border: 25px solid;
+            width: 350px;
+            height: 350px;
+            border: 10px solid;
             border-radius: 50%;
-            border-left-color: rgb(235, 235, 235);
-            border-top-color: #aaa;
-            border-right-color: #555;
-            border-bottom-color: #000;
-            animation: spin 500ms infinite linear;
+            background: #F5F5F5;
+            border-left-color: #F5F5F5;
+            border-top-color: rgb(255, 255, 255);
+            border-right-color: rgb(255, 255, 255);
+            border-bottom-color: rgb(255, 255, 255);
+            box-shadow: 4px 4px 5px rgba(0, 0, 0, .4);
+            animation: spin1 50000ms infinite linear;
+            transition: border-radius 1s linear, box-shadow 1s 1s ease-in-out, transform 1s 2s linear, background 1s 3s linear;
         }
         
-        @keyframes spin {
+        .spinner1:hover {
+            border-radius: 0;
+            transform: scale(1.1) rotate(360deg);
+            background: #DACFCB;
+        }
+        
+        .spinner2 {
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            border: 10px solid;
+            border-radius: 50%;
+            background: #F5F5F5;
+            border-left-color: #F5F5F5;
+            border-top-color: rgb(255, 255, 255);
+            border-right-color: rgb(255, 255, 255);
+            border-bottom-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, .4);
+            animation: spin2 2500ms infinite linear;
+        }
+        
+        .spinner3 {
+            margin: 0 auto;
+            width: 250px;
+            height: 250px;
+            border: 10px solid;
+            border-radius: 50%;
+            background: #F5F5F5;
+            border-left-color: #F5F5F5;
+            border-top-color: rgb(255, 255, 255);
+            border-right-color: rgb(255, 255, 255);
+            border-bottom-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, .4);
+            animation: spin3 2000ms infinite linear;
+        }
+        
+        .spinner4 {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            background: #F5F5F5;
+            border-left-color: #F5F5F5;
+            border-top-color: rgb(255, 255, 255);
+            border-right-color: rgb(255, 255, 255);
+            border-bottom-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, .4);
+            animation: spin4 2000ms infinite linear;
+        }
+        
+        .spinner5 {
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            border: 10px solid;
+            border-radius: 50%;
+            background: #F5F5F5;
+            border-left-color: #F5F5F5;
+            border-top-color: rgb(255, 255, 255);
+            border-right-color: rgb(255, 255, 255);
+            border-bottom-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, .4);
+            animation: spin5 50000ms infinite linear;
+            transition: border-radius 1s linear, box-shadow 1s 1s ease-in-out, transform 1s 2s linear, background 1s 3s linear;
+        }
+        
+        .spinner5:hover {
+            border-radius: 0;
+            transform: scale(1.1) rotate(360deg);
+            background: #DACFCB;
+            animation: spin5 50000ms infinite linear;
+        }
+        
+        @keyframes spin1 {
+            from {
+                transform: rotate(-360deg);
+                animation-timing-function: ease-in-out;
+            }
+            25% {
+                transform: rotate(360deg);
+                animation-timing-function: ease-in-out;
+            }
+            50% {
+                transform: rotate(-360deg);
+                animation-timing-function: ease-in-out;
+            }
+            75% {
+                transform: rotate(360deg);
+                animation-timing-function: ease-in-out;
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+        
+        @keyframes spin2 {
+            100% {
+                transform: rotate(-360deg)
+            }
+        }
+        
+        @keyframes spin3 {
             100% {
                 transform: rotate(360deg)
+            }
+        }
+        
+        @keyframes spin4 {
+            100% {
+                transform: rotate(-360deg)
+            }
+        }
+        
+        @keyframes spin5 {
+            100% {
+                transform: rotate(-360deg)
             }
         }
     </style>
@@ -46,7 +163,20 @@
     </div>
     <div class="container">
         <div id="movies" class="row">
-            <div class="spinner"></div>
+           <div class="spinner1">
+                <div class="spinner2">
+                    <div class="spinner3">
+                        <div class="spinner4">
+                            <div class="spinner5">
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
